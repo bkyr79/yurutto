@@ -1,6 +1,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="style.css">
 <title>継続アプリ「ゆるっと」</title>
 </head>
 <body>
@@ -24,7 +25,8 @@ if (!$result) {
 $result = mysqli_query($con, 'SELECT * FROM actions');
 while ($data = mysqli_fetch_array($result)) {
   print '<form method="post" action="confirmation.php">';
-  print '<div class="list" name="list">' . $data['list'] . '<div>';
+  print '<div class="list" name="list">' . $data['list'] . '</div>';
+  print '<input class="complete" type="submit" name="execution" value="やったよ！">';
   print '</form>';
 }
 

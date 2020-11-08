@@ -1,0 +1,10 @@
+.set {
+}
+
+.list {
+  display: inline;
+  height: 30px;
+}
+.complete {
+  display: inline;
+}
