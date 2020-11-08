@@ -27,7 +27,7 @@ try {
 
   $stmt->execute();
 
-  header('Location: index.php');
+  header('Location: index2.php');
   exit();
 } catch(PDOException $e){
   die ('エラー：' . $e->getMessage());
