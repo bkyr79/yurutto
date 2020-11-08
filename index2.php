@@ -23,7 +23,9 @@ if (!$result) {
 
 $result = mysqli_query($con, 'SELECT * FROM actions');
 while ($data = mysqli_fetch_array($result)) {
-  echo '<p>' . $data['list'] . ':' . $data['point'] . "</p>\n";
+  print '<form method="post" action="confirmation.php">';
+  print '<div class="list" name="list">' . $data['list'] . '<div>';
+  print '</form>';
 }
 
 $con = mysqli_close($con);
@@ -34,12 +36,3 @@ if (!$con) {
 ?>
 </body>
 </html>
-
-print '<form method="post" action="confirmation.php">
-print '<div class="list" name="list1">皿洗い<div>
-print '<input type="submit" name="execution1" value="やったよ！"><br><br>
-print '<div class="list" name="list2">お風呂掃除<div>
-print '<input type="submit" name="execution2" value="やったよ！"><br><br>
-print '<div class="list" name="list3">掃除機がけ<div>
-print '<input type="submit" name="execution3" value="やったよ！"><br><br>
-print '</form>
