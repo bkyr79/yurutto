@@ -7,7 +7,7 @@
 <body>
 リスト追加<br/>
 <br/>
-<form method="post" action="li_add_check.php">
+<form method="post" action="li_add_check2.php">
 追加したい項目を入力してね。<br/>
 <input type="text" name="list" style="width:200px"><br/>
 ポイントを入力してね。<br/>
