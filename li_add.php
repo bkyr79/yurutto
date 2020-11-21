@@ -12,6 +12,8 @@
 <input type="text" name="list" style="width:200px"><br/>
 ポイントを入力してね。<br/>
 <input type="text" name="point" style="width:50px"><br/>
+なんて褒めてあげるのか決めてね。<br/>
+<input type="text" name="praise" value="エライ！ありがとう！！" style="width:200px"><br/>
 <br/>
 <input type="button" onclick="history.back()" value="戻る">
 <input type="submit" value="OK">

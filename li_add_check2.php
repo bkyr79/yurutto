@@ -2,6 +2,7 @@
 
 $li_list = $_POST['list'];
 $li_point = $_POST['point'];
+$li_praise = $_POST['praise'];
 
 if ($li_list == '' || $li_point == '') {
   print 'リストが入力されていません。<br/>';
@@ -18,12 +19,13 @@ try {
   $db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
 
   $stmt = $db->prepare("
-    INSERT INTO actions(list,point)
-    VALUES (:list, :point)"
+    INSERT INTO actions(list,point,praise)
+    VALUES (:list, :point, :praise)"
   );
 
   $stmt->bindParam(':list', $li_list, PDO::PARAM_STR);
   $stmt->bindParam(':point', $li_point, PDO::PARAM_STR);
+  $stmt->bindParam(':praise', $li_praise, PDO::PARAM_STR);
 
   $stmt->execute();
 
