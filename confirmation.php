@@ -22,12 +22,6 @@ if (!$result) {
   exit('文字コードを指定できませんでした。');
 }
 
-// $result = mysqli_query($con, 'SELECT praise FROM actions');
-//   print '<form method="post" action="confirmation.php">';
-//   print '<div class="list" name="praise">' . $data['list'] . '</div>';
-//   // print '<input class="complete" type="submit" name="execution" value="やったよ！">';
-//   print '</form>';
-
 $con = mysqli_close($con);
 if (!$con) {
   exit('データベースとの接続を閉じられませんでした。');
@@ -37,6 +31,7 @@ try
 {
 
 $pro_code=$_POST['id'];
+$add_point=$_POST['add_point'];
 
 $dsn = 'mysql:dbname=yurutto;host=localhost;charset=utf8';
 $user='root';
@@ -44,7 +39,8 @@ $password='';
 $dbh = new PDO($dsn, $user, $password);
 $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-$sql = 'SELECT praise FROM actions WHERE id = ?';
+$sql = 'SELECT praise FROM actions WHERE id = ?;
+        INSERT INTO users(point) SELECT point FROM actions where id='.$pro_code;
 $stmt = $dbh->prepare($sql);
 $data[]=$pro_code;
 $stmt->execute($data);
@@ -56,6 +52,7 @@ $dbh = null;
 
 
 print $li_praise;
+print $add_point;
 
 }
 catch (Exception $e)
@@ -70,6 +67,7 @@ catch (Exception $e)
 <br/>
 <form method="post" action="index2.php">
 <input type="hidden" name="code" value="<?php print $pro_code['praise']; ?>">
+<input type="hidden" name="sum_point" value="<?php print $sum_point['']; ?>">
 <input type="button" onclick="history.back()" value="戻る">
 <input type="submit" value="OK">
 </form>

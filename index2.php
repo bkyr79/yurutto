@@ -26,8 +26,9 @@
   while ($data = mysqli_fetch_array($result)) {
     print '<form method="post" action="confirmation.php">';
     print '<input type="hidden" class="list" name="id" value="'.$data['id'].'">';
-    print '<input type="hidden" class="list" name="list">' . $data['list'] ;
-    print '<input class="complete" type="submit" name="yattayo" value="やったよ！">';
+    print '<input type="hidden" class="list" name="add_point" value="'.$data['point'].'">';    
+    print '<input type="hidden" class="list">' . $data['list'] ;
+    print '<input class="complete" type="submit" value="やったよ！">';
     print '</form>';
   }
 
@@ -35,46 +36,14 @@
   if (!$con) {
     exit('データベースとの接続を閉じられませんでした。');
   }
-
-  // try
-  // {
-  
-  // $data=$_POST['id'];
-  
-  // $dsn = 'mysql:dbname=yurutto;host=localhost;charset=utf8';
-  // $user='root';
-  // $password='';
-  // $dbh = new PDO($dsn, $user, $password);
-  // $dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-  
-  // $sql = "SELECT praise FROM actions WHERE id = $data";
-  // $stmt = $dbh->prepare($sql);
-  // $data[]=$pro_code;
-  // $stmt->execute($data);
-  
-  // $rec = $stmt->fetch(PDO::FETCH_ASSOC);
-  // $li_praise=$rec['id'];
-  
-  // $dbh = null;
-  
-  
-  // print $li_praise;
-  
-  // }
-  // catch (Exception $e)
-  // {
-  
-  //   print 'ただいま障害により大変ご迷惑をお掛けしております。';
-  //   exit();
-  // }
   
 ?>
 
 <br/>
-<form method="post" action="">
-<input type="hidden" name="code" value="<?php print $pro_code['praise']; ?>">
+<!-- <form method="post" action=""> -->
+<!-- <input type="hidden" name="code" value="<?php print $pro_code['praise']; ?>"> -->
 <input type="button" onclick="history.back()" value="戻る">
-<input type="submit" value="OK">
+<!-- <input type="submit" value="OK"> -->
 </form>
 
 
