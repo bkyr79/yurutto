@@ -50,7 +50,6 @@ $li_praise=$rec['praise'];
 
 $dbh = null;
 
-
 print $li_praise;
 print $add_point;
 
@@ -65,9 +64,9 @@ catch (Exception $e)
 ?>
 <br/>
 <br/>
-<form method="post" action="index2.php">
+<form method="post" action="sum_point.php">
 <input type="hidden" name="code" value="<?php print $pro_code['praise']; ?>">
-<input type="hidden" name="sum_point" value="<?php print $sum_point['']; ?>">
+<input type="hidden" name="sum_point" value="<?php print $add_point; ?>">
 <input type="button" onclick="history.back()" value="戻る">
 <input type="submit" value="OK">
 </form>
