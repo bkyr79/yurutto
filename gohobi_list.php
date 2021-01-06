@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <title>継続アプリ「ゆるっと」</title>
 </head>
@@ -22,14 +22,9 @@
     exit('文字コードを指定できませんでした。');
   }
 
-  $result = mysqli_query($con, 'SELECT * FROM actions');
+  $result = mysqli_query($con, 'SELECT gohobi_name, necessary_point FROM gohobi');
   while ($data = mysqli_fetch_array($result)) {
-    print '<form method="post" action="confirmation.php">';
-    print '<input type="hidden" class="list" name="id" value="'.$data['id'].'">';
-    print '<input type="hidden" class="list" name="add_point" value="'.$data['point'].'">';    
-    print '<input type="hidden" class="list">' . $data['list'] ;
-    print '<input class="complete" type="submit" value="やったよ！">';
-    print '</form>';
+    print 'NAME: '.$data['gohobi_name'].'　POINT: '.$data['necessary_point'].'<br>';
   }
 
   $con = mysqli_close($con);

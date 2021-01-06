@@ -1,10 +1,93 @@
-.set {
+body {
+  background-color: #CCFFFF;
 }
 
-.list {
-  display: inline;
-  height: 30px;
+.confirm-button {
+  width: 90px;
+  height: 33px;
+  background-color: rgb(244,154,1);
+  color: #fffafa;
+  font-size: 16px;
+  border-radius: 100vh;
+  float: left;
+  margin-left: 20px; 
+  margin-top: 10px; 
 }
+
+.confirm-submit {
+  width: 90px;
+  height: 33px;
+  background-color: rgb(244,154,1);
+  color: #fffafa;
+  font-size: 16px;
+  border-radius: 100vh;
+  float: right;
+  margin-right: 20px; 
+  margin-top: 10px; 
+}
+
+.set {
+}
+.title{
+  font-size: 30px;
+  font-weight: bold;
+  padding: 80px 0 8px;
+}
+.content{
+  width: 310px;
+  height: 555px;
+}
+.err_msg{
+  color: red;
+}
+.input{
+  width: 300px;
+  height: 80px;
+  background-color: rgb(244,154,1);
+  color: #fffafa;
+  font-size: 25px;
+  border-bottom: 5px solid #d2691e;
+  border-radius: 100vh;
+  top: calc(50% - .5em);
+}
+.input:focus {
+  outline: none;
+}
+.is-hidden {
+  display: none;
+}
+.form{
+  margin: 40px 0;
+}
+
+.confirm-form{
+  text-align: center;
+}
+
 .complete {
   display: inline;
 }
+.praise{
+  font-size: 33px;
+  font-weight: bold;
+  padding-top: 180px;
+  color: blue;
+  text-shadow: 1px 2px 0px #939393, 0px 2px 0px #949350;
+}
+
+
+/* .praise
+{
+    -webkit-transition: all .3s cubic-bezier(.190, 1.000, .220, 1.000) 2.3s;
+            transition: all .3s cubic-bezier(.190, 1.000, .220, 1.000) 2.3s;
+    letter-spacing: -.07em;
+}
+
+.animate .praise
+{
+    font-size: 80px;
+
+    -webkit-transform: scale(1.5,1.5);
+        -ms-transform: scale(1.5,1.5);
+            transform: scale(1.5,1.5);
+} */

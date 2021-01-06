@@ -1,10 +1,13 @@
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <title>継続アプリ「ゆるっと」</title>
+<link type="text/css" rel="stylesheet" href="./style.css">
 </head>
 <body>
+<div class="content">
+<div class="praise">
 <?php
 
 $con = mysqli_connect('127.0.0.1', 'root', '');
@@ -50,8 +53,8 @@ $li_praise=$rec['praise'];
 
 $dbh = null;
 
-print $li_praise;
-print $add_point;
+print $li_praise.'<br>';
+print $add_point.'Pゲット！!';
 
 }
 catch (Exception $e)
@@ -62,14 +65,13 @@ catch (Exception $e)
 }
 
 ?>
-<br/>
-<br/>
-<form method="post" action="sum_point.php">
+</div>
+<form method="post" action="sum_point.php" class="confirm-form">
 <input type="hidden" name="code" value="<?php print $pro_code['praise']; ?>">
 <input type="hidden" name="sum_point" value="<?php print $add_point; ?>">
-<input type="button" onclick="history.back()" value="戻る">
-<input type="submit" value="OK">
+<input type="button" class="confirm-button" onclick="history.back()" value="戻る">
+<input type="submit" class="confirm-submit" value="OK">
 </form>
-
+</div>
 </body>
 </html>

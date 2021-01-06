@@ -1,40 +1,38 @@
 <?php
-if(isset($_POST['list']))
-{
-  print $_POST['list'];
-  print'<br/>';
-}
-else
-{
-  print'リストが入力されていません。<br/>';
-}
-if(isset($_POST['point']))
-{
-  print $_POST['point'];
-  print 'ポイント<br/>';
-}
-else
-{
-  print 'ポイントをきちんと入力してください。<br/>';
 
+$li_list = $_POST['list'];
+$li_point = $_POST['point'];
+$li_praise = $_POST['praise'];
+
+if ($li_list == '' || $li_point == '') {
+  print 'リストが入力されていません。<br/>';
+  print '<a href="li_add.php">戻る</a>';
+  exit();
 }
 
-if($_POST['list']=='' || $_POST['point']=='')
-{
-  print '<form>';
-  print '<input type="button" onclick="history.back()" value="戻る">';
-  print '</form>';
-}
-else
-{
-  print '上記の商品を追加します。<br/>';
-  print'<form method="post" action="li_add_done.php">';
-  print'<input type="hidden" name="name" value="'.$_POST['list'].'">';
-  print'<input type="hidden" name="price" value="'.$_POST['point'].'">';
-  print'<br/>';
-  print'<input type="button" onclick="history.back()" value="戻る">';
-  print'<input type="submit" value="OK">';
-  print'</form>';
+$dsn = 'mysql:dbname=yurutto;host=localhost;charset=utf8';
+$user = 'root';
+$password ='';
+
+try {
+  $db = new PDO($dsn,$user,$password);
+  $db->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+
+  $stmt = $db->prepare("
+    INSERT INTO actions(list,point,praise)
+    VALUES (:list, :point, :praise)"
+  );
+
+  $stmt->bindParam(':list', $li_list, PDO::PARAM_STR);
+  $stmt->bindParam(':point', $li_point, PDO::PARAM_STR);
+  $stmt->bindParam(':praise', $li_praise, PDO::PARAM_STR);
+
+  $stmt->execute();
+
+  header('Location: index.php');
+  exit();
+} catch(PDOException $e){
+  die ('エラー：' . $e->getMessage());
 }
 
 ?>
