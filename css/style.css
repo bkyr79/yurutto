@@ -1,0 +1,359 @@
+body {
+  background: rgba(248, 225, 23, 0.24); 
+  margin: 0 auto;
+  width: 100%;
+}
+
+.confirm-button {
+  color: black;
+  font-size: 25px;
+  width: 114px;
+  height: 54px;
+  background: #FEA827;
+  border: 1px solid #FDF8C7;
+  box-sizing: border-box;
+  border-radius: 20px;
+  float: left;
+  margin-top: 10px; 
+  position: absolute;
+  top: 410px;
+  left: 38px;
+}
+
+.confirm-submit {
+  color: black;
+  font-size: 25px;
+  float: right;
+  margin-top: 10px; 
+  width: 114px;
+  height: 54px;
+  background: #FEA827;
+  border: 1px solid #FDF8C7;
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: absolute;
+  top: 410px;
+  left: 223px;
+}
+
+.sum_point {
+  position: absolute;
+  width: 260px;
+  height: 225px;
+  left: 57px;
+  top: 130px;
+}
+.top{
+  position: relative;
+  width: 260px;
+  height: 89px;
+  /* left: 57px;
+  top: 157px; */
+}
+.bottom{
+  position: relative;
+  width: 260px;
+  height: 89px;
+  margin-top: 50px;
+}
+.your-reward{
+  width: 260px;
+  height: 48px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.part{
+  width: 260px;
+  height: 43px;
+  margin-bottom: 3px;
+  background: rgba(254, 168, 39, 0.4);
+  text-align: center;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 23px;
+  position: relative;
+}
+.part1{
+  width: 260px;
+  height: 43px;
+  margin-bottom: 3px;
+  background: rgba(254, 168, 39, 0.4);
+  text-align: center;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 23px;
+  position: relative;
+}
+.part span{
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  top: 9px;
+}
+.part1 span{
+  display: inline-block;
+  position: relative;
+  top: 9px;
+}
+.target {
+  color: black;
+  font-size: 25px;
+  margin-top: 10px; 
+  width: 114px;
+  height: 54px;
+  background: #FEA827;
+  border: 1px solid #FDF8C7;
+  box-sizing: border-box;
+  border-radius: 20px;
+  position: relative;
+  left: 165px;
+  bottom: -45px;
+}
+
+.title{
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 80px 0 8px;
+}
+.content{
+  width: 310px;
+  height: 555px;
+  text-align: center;
+  margin: 0 auto;
+}
+.contentA{
+  position: relative;
+  top: 20px;
+  left: 75px;
+}
+.err_msg{
+  color: red;
+}
+.input{
+  width: 253px;
+  height: 71px;
+  font-size: 24px;
+  left: 61px;
+  top: 279px;
+  background: #FEA827;
+  border: 1px solid #FDF8C7;
+  box-sizing: border-box;
+  border-radius: 20px;
+  top: calc(50% - .5em);
+}
+.input:focus {
+  outline: none;
+}
+.is-hidden {
+  display: none;
+}
+.form{
+  margin: 40px 0;
+}
+
+.confirm-form{
+  text-align: center;
+}
+
+.complete {
+  display: inline;
+}
+.praise{
+  font-size: 37px;
+  padding-top: 142px;
+  padding-bottom: 38px;
+  text-shadow: 1px 2px 0px #939393, 0px 2px 0px #949350;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 56px;  
+  color: #000000;
+}
+
+.hidden-submit {
+  display: none;
+}
+
+.list-button{
+  position: relative;
+  left: 13px;
+  width: 65px;
+  height: 54px;
+  margin-top: 32px;
+  margin-right: 24px;
+  background: #FEA827;
+  border: 1px solid #FDF8C7;
+  box-sizing: border-box;
+  border-radius: 20px;
+  font-size: 19px;
+}
+.section-action-list{
+  position: absolute;
+  top: 61px;
+}
+.action-list{
+  position: relative;
+  margin-left: 28px;
+  margin-bottom: 66px;
+  width: 307px;
+  height: 45px;
+  /* left: 33px; */
+  top: 61px;
+  background: rgba(254, 168, 39, 0.4);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-size: 30px;
+  line-height: 35px;
+}
+.action-list p{
+  position: relative;
+  top: 3px;
+  /* left: 70px; */
+  margin-left: 72px;  
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.reward-list{
+  position: relative;
+  margin-left: 37px;
+  margin-bottom: 66px;
+  top: 50px;
+  width: 307px;
+  height: 45px;
+  /* left: 33px;
+  top: 61px; */
+  background: rgba(254, 168, 39, 0.4);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-size: 30px;
+  line-height: 35px;
+}
+.reward-list p{
+  position: relative;
+  top: 4px;
+  /* left: 70px; */
+  margin-left: 66px;  
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.point-and-list{
+  position: relative;
+  left: 13px;
+  font-size: 22px;
+  display: table-cell;
+  display: inline-block;
+  /* margin-left: 20px;  */
+  padding-top: 0px;
+  /* border-color: #FDF7C7; */
+  border: solid 1px rgba(248, 225, 23, 0.24); 
+  background: rgba(248, 225, 23, 0.24); 
+}
+.your-point{
+  position: relative;
+  margin-left: 37px;
+  margin-bottom: 66px;
+  top: 67px;
+  width: 307px;
+  height: 45px;
+  /* left: 33px;
+  top: 61px; */
+  background: rgba(254, 168, 39, 0.4);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  font-size: 30px;
+  line-height: 35px;
+}
+.your-point p{
+  position: relative;
+  top: 4px;
+  /* left: 70px; */
+  margin-left: 73px;  
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.radio{
+  position: relative;
+  display: table-cell;
+  top: 7px;
+  width: 35px;
+  height: 35px;
+  
+}
+.radio-list{
+  position: relative;
+  display: table;
+  left: 12px;
+  bottom: 24px;
+}
+
+.four-button{
+  position: fixed;
+  bottom: 10px;
+  left: 5px;
+  width: 323px;
+  height: 54px;
+}
+.reward-lists{
+  width: 307px;
+  margin: 0 auto;
+  padding-left: 75px;
+  font-size: 20px;
+}
+.reward-lists p{
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+.your-point-font{
+  position: relative;
+  top: 129px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.your-point-font span{
+  font-size: 50px;
+}
+.contentR{
+  position: absolute;
+  top: 133px;
+  left: 48px;
+  width: 277px;
+  height: 305px;
+  background: #FFFF66;
+}
+.have-a-fun-time{
+  position: relative;
+  top: 69px;
+  left: 14px; 
+  width: 244px;
+  height: 38px;
+  font-size: 25px;
+  line-height: 37px;
+}
+.point-in-hand{
+  position: relative;
+  top: 153px;
+  left: 44px; 
+  width: 189px;
+  height: 34px;
+  background: rgba(254, 168, 39, 0.4);
+  font-size: 22px;
+  text-align: center;
+}
+.sum_pointR{
+  position: relative;
+  top: 160px;
+  left: 44px; 
+  width: 189px;
+  height: 34px;
+  background: rgba(254, 168, 39, 0.4);
+  font-size: 22px;
+  text-align: center;  
+}
+.sum_pointR span{
+  font-weight: bold;
+}
