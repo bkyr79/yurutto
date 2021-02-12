@@ -1,11 +1,14 @@
 <html>
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="css/style.css">
 <title>継続アプリ「ゆるっと」</title>
 </head>
 <body>
 <?php
+  require "menu.php";
+
+  print '<div class="reward-list"><p>Reward List</p></div>';
 
   $con = mysqli_connect('127.0.0.1', 'root', '');
   if (!$con) {
@@ -22,10 +25,13 @@
     exit('文字コードを指定できませんでした。');
   }
 
-  $result = mysqli_query($con, 'SELECT gohobi_name, necessary_point FROM gohobi');
+  $result = mysqli_query($con, 'SELECT gohobi_name, necessary_point FROM gohobi ORDER BY necessary_point DESC');
+  print '<section class="reward-lists">';
   while ($data = mysqli_fetch_array($result)) {
-    print 'NAME: '.$data['gohobi_name'].'　POINT: '.$data['necessary_point'].'<br>';
+    print '<p>'.$data['necessary_point'].'P:　'.$data['gohobi_name'].'</p>';
+
   }
+  print '</section>';
 
   $con = mysqli_close($con);
   if (!$con) {
@@ -35,10 +41,6 @@
 ?>
 
 <br/>
-<!-- <form method="post" action=""> -->
-<!-- <input type="hidden" name="code" value="<?php print $pro_code['praise']; ?>"> -->
-<input type="button" onclick="history.back()" value="戻る">
-<!-- <input type="submit" value="OK"> -->
 </form>
 
 

@@ -1,12 +1,13 @@
 <html>
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="css/style.css">
 <title></title>
 </head>
 <body>
 
 <?php
+require "menu.php";
 
 ini_set('display_errors', 0);
 
@@ -42,14 +43,19 @@ $rec = $stmt->fetch(PDO::FETCH_ASSOC);
 $sum_point=$rec['sum_point'];
 
 if(isset($_POST['nPoint'])){
-  print '堪能してね〜';
+  print '<div class="contentR">';
+  print '<div class="have-a-fun-time">Have a Fun time🎶';
+  print '</div>';
+  print '<div class="point-in-hand">POINT in hand';
+  print '</div>';
+  print '<div class="sum_pointR"><span>'.$sum_point.'P';
+  print '</span></div>';
+  print '</div>';
 }
-
-print '</br></br>';
-print '残りは'.$sum_point.'Pだよ';
+// print '<div class="your-point"><p>your Point</p></div>';
+// print '<div class="your-point-font"><span>'.$sum_point.' P</span></div>';
 
 ?>
 </br>
-<input type="button" onclick="history.back()" value="戻る">
 </body>
 </html>

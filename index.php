@@ -1,15 +1,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <title>継続アプリ「ゆるっと」</title>
-<link type="text/css" rel="stylesheet" href="./style.css">
+<link type="text/css" rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<div class="content">
-<div class="title">今日は何をしたの？</div>
-  <?php
 
+<?php
+  require "menu.php";
+?>
+
+<div class="content">
+<div class="title">Select to be done.</div>
+  <?php
     $con = mysqli_connect('127.0.0.1', 'root', '');
     if (!$con) {
       exit('データベースに接続できませんでした。');

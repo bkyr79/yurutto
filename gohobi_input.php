@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <title>継続アプリ「ゆるっと」</title>
-</head>
+<link type="text/css" rel="stylesheet" href="./css/style.css"></head>
 <body>
+
+<?php
+  require "menu.php";
+?>
+
 ご褒美リスト追加<br/>
 <br/>
 <form method="post" action="gohobi_check.php">

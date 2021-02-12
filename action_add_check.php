@@ -5,8 +5,13 @@ $li_point = $_POST['point'];
 $li_praise = $_POST['praise'];
 
 if ($li_list == '' || $li_point == '') {
-  print 'リストが入力されていません。<br/>';
-  print '<a href="li_add.php">戻る</a>';
+  print '入力されていません。<br/>';
+  print '<a href="action_add.php">戻る</a>';
+  exit();
+}
+if($li_point > 5){
+  print 'ポイント内容が正しくありません';
+  print '<a href="action_add.php">戻る</a>';
   exit();
 }
 
